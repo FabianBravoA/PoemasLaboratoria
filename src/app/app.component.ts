@@ -35,7 +35,7 @@ export class AppComponent {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      this.authService.signup(result.email, result.password);
+      this.authService.login(result.email, result.password);
     });  
   }
 
