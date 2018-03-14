@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabase } from 'angularfire2/database-deprecated'
 
 
 import { AppComponent } from './app.component';
@@ -42,7 +43,7 @@ import { LoginModalComponent } from './login-modal/login-modal.component';
     MatFormFieldModule,
     MatInputModule
   ],
-  providers: [AuthService],
+  providers: [AuthService,AngularFireDatabase],
   bootstrap: [AppComponent],
   entryComponents:[
     RegisterComponent,
